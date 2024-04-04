@@ -15,6 +15,7 @@ import java.util.Objects;
 import java.util.Set;
 
 @Getter
+@Setter
 @NoArgsConstructor
 @ToString(callSuper = true)
 @Entity

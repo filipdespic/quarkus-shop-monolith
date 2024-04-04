@@ -9,8 +9,6 @@ import model.status.CartStatus;
 @Getter
 @Setter
 @NoArgsConstructor(force = true)
-@EqualsAndHashCode
-@ToString(callSuper = true)
 @Entity
 @Table(name = "carts")
 public class Cart extends AbstractEntity {
@@ -21,11 +19,12 @@ public class Cart extends AbstractEntity {
     @NotNull
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
-    private final CartStatus status;
+    private CartStatus status;
 
     public Cart(Customer customer, @NotNull CartStatus status) {
         this.customer = customer;
         this.status = status;
     }
+
 
 }
