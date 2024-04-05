@@ -3,12 +3,14 @@ package controller;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.*;
 import model.Cart;
+import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 import service.CartService;
 import service.dtos.CartDto;
 
 import java.util.List;
 
 @Path("/carts")
+@Tag(name = "Cart", description = "All the cart methods")
 public class CartResource {
     @Inject
     CartService cartService;

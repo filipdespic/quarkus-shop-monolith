@@ -2,12 +2,14 @@ package controller;
 
 import jakarta.inject.Inject;
 import jakarta.ws.rs.*;
+import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 import service.ReviewService;
 import service.dtos.ReviewDto;
 
 import java.util.List;
 
 @Path("/reviews")
+@Tag(name = "Review", description = "All the review methods")
 public class ReviewResource {
     @Inject
     ReviewService reviewService;

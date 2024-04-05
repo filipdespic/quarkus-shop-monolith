@@ -2,12 +2,14 @@ package controller;
 
 import jakarta.inject.Inject;
 import jakarta.ws.rs.*;
+import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 import service.PaymentService;
 import service.dtos.PaymentDto;
 
 import java.util.List;
 
 @Path("/payments")
+@Tag(name = "Payment", description = "All the payment methods")
 public class PaymentResource {
     @Inject
     PaymentService paymentService;

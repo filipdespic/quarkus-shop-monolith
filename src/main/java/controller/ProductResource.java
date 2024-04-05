@@ -2,12 +2,14 @@ package controller;
 
 import jakarta.inject.Inject;
 import jakarta.ws.rs.*;
+import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 import service.ProductService;
 import service.dtos.ProductDto;
 
 import java.util.List;
 
 @Path("/products")
+@Tag(name = "Product", description = "All the product methods")
 public class ProductResource {
     @Inject
     ProductService productService;

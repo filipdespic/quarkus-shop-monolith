@@ -2,12 +2,14 @@ package controller;
 
 import jakarta.inject.Inject;
 import jakarta.ws.rs.*;
+import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 import service.OrderService;
 import service.dtos.OrderDto;
 
 import java.util.List;
 
 @Path("/orders")
+@Tag(name = "Order", description = "All the order methods")
 public class OrderResource {
     @Inject
     OrderService orderService;

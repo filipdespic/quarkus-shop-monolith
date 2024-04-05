@@ -2,12 +2,14 @@ package controller;
 
 import jakarta.inject.Inject;
 import jakarta.ws.rs.*;
+import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 import service.CustomerService;
 import service.dtos.CustomerDto;
 
 import java.util.List;
 
 @Path("/customers")
+@Tag(name = "Customer", description = "All the customer methods")
 public class CustomerResource {
     @Inject
     CustomerService customerService;

@@ -2,6 +2,7 @@ package controller;
 
 import jakarta.inject.Inject;
 import jakarta.ws.rs.*;
+import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 import service.CategoryService;
 import service.dtos.CategoryDto;
 import service.dtos.ProductDto;
@@ -9,6 +10,7 @@ import service.dtos.ProductDto;
 import java.util.List;
 
 @Path("/categories")
+@Tag(name = "Category", description = "All the category methods")
 public class CategoryResource {
     @Inject
     CategoryService categoryService;
